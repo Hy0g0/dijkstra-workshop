@@ -96,6 +96,47 @@ public class Cities {
 }
 
 
+public double BruteForce() {
+    ArrayList<City> shortestPath = null;
+    double shortestDistance = Double.POSITIVE_INFINITY;
+
+    ArrayList<City> startingPath = new ArrayList<>(cityList);
+    startingPath.add(cityList.get(0)); // Return to the starting city to complete the loop
+
+    ArrayList<City> currentPath = new ArrayList<>();
+    currentPath.add(cityList.get(0)); // Start from the first city
+
+    permuteCities(startingPath, currentPath, shortestPath, shortestDistance);
+
+    return this.calculateTotalDistance(shortestPath);
+}
+
+private void permuteCities(
+        ArrayList<City> remainingCities,
+        ArrayList<City> currentPath,
+        ArrayList<City> shortestPath,
+        double shortestDistance) {
+    if (remainingCities.isEmpty()) {
+        // Calculate the total distance of the current path
+        double currentDistance = calculateTotalDistance(currentPath);
+        if (currentDistance < shortestDistance) {
+            shortestDistance = currentDistance;
+            shortestPath.clear();
+            shortestPath.addAll(currentPath);
+        }
+    } else {
+        for (int i = 0; i < remainingCities.size(); i++) {
+            City nextCity = remainingCities.get(i);
+            ArrayList<City> newRemainingCities = new ArrayList<>(remainingCities);
+            newRemainingCities.remove(i);
+            ArrayList<City> newPath = new ArrayList<>(currentPath);
+            newPath.add(nextCity);
+            permuteCities(newRemainingCities, newPath, shortestPath, shortestDistance);
+        }
+    }
+}
+
+
 public double localSearch() {
     ArrayList<City> currentOrder = new ArrayList<>(cityList);
     double currentDistance = getDistanceInOrder();
