@@ -1,0 +1,170 @@
+[
+  {
+    "id": "2991153",
+    "name": "Muret",
+    "coordinates": {
+      "lon": 1.32541,
+      "lat": 43.45998
+    }
+  },
+  {
+    "id": "2997936",
+    "name": "Lodève",
+    "coordinates": {
+      "lon": 3.31959,
+      "lat": 43.73178
+    }
+  },
+  {
+    "id": "3018238",
+    "name": "Florac",
+    "coordinates": {
+      "lon": 3.59276,
+      "lat": 44.32626
+    }
+  },
+  {
+    "id": "2998264",
+    "name": "Limoux",
+    "coordinates": {
+      "lon": 2.22173,
+      "lat": 43.05487
+    }
+  },
+  {
+    "id": "3035418",
+    "name": "Bagnères-de-Bigorre",
+    "coordinates": {
+      "lon": 0.14876,
+      "lat": 43.06497
+    }
+  },
+  {
+    "id": "2988670",
+    "name": "Pamiers",
+    "coordinates": {
+      "lon": 1.61079,
+      "lat": 43.1165
+    }
+  },
+  {
+    "id": "2979657",
+    "name": "Saint-Girons",
+    "coordinates": {
+      "lon": 1.14587,
+      "lat": 42.98491
+    }
+  },
+  {
+    "id": "2980045",
+    "name": "Saint-Gaudens",
+    "coordinates": {
+      "lon": 0.72318,
+      "lat": 43.10813
+    }
+  },
+  {
+    "id": "3038224",
+    "name": "Alès",
+    "coordinates": {
+      "lon": 4.08082,
+      "lat": 44.12489
+    }
+  },
+  {
+    "id": "2968755",
+    "name": "Villefranche-de-Rouergue",
+    "coordinates": {
+      "lon": 2.03702,
+      "lat": 44.35166
+    }
+  },
+  {
+    "id": "3028263",
+    "name": "Castres",
+    "coordinates": {
+      "lon": 2.24088,
+      "lat": 43.60527
+    }
+  },
+  {
+    "id": "2985653",
+    "name": "Prades",
+    "coordinates": {
+      "lon": 2.42177,
+      "lat": 42.61755
+    }
+  },
+  {
+    "id": "2990919",
+    "name": "Narbonne",
+    "coordinates": {
+      "lon": 3.00141,
+      "lat": 43.18396
+    }
+  },
+  {
+    "id": "3028322",
+    "name": "Castelsarrasin",
+    "coordinates": {
+      "lon": 1.10666,
+      "lat": 44.04042
+    }
+  },
+  {
+    "id": "3037070",
+    "name": "Argelès-Gazost",
+    "coordinates": {
+      "lon": -0.09914,
+      "lat": 43.00271
+    }
+  },
+  {
+    "id": "2993875",
+    "name": "Millau",
+    "coordinates": {
+      "lon": 3.07848,
+      "lat": 44.09973
+    }
+  },
+  {
+    "id": "3027888",
+    "name": "Ceret",
+    "coordinates": {
+      "lon": 2.74804,
+      "lat": 42.48533
+    }
+  },
+  {
+    "id": "2998811",
+    "name": "Le Vigan",
+    "coordinates": {
+      "lon": 3.60648,
+      "lat": 43.99106
+    }
+  },
+  {
+    "id": "2993749",
+    "name": "Mirande",
+    "coordinates": {
+      "lon": 0.40389,
+      "lat": 43.51443
+    }
+  },
+  {
+    "id": "3023943",
+    "name": "Condom",
+    "coordinates": {
+      "lon": 0.37199,
+      "lat": 43.95816
+    }
+  },
+  {
+    "id": "3032833",
+    "name": "Béziers",
+    "coordinates": {
+      "lon": 3.21402,
+      "lat": 43.34122
+    }
+  }
+]
