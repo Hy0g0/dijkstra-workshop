@@ -1,5 +1,13 @@
 [
   {
+    "id": "2991153",
+    "name": "Muret",
+    "coordinates": {
+      "lon": 1.32541,
+      "lat": 43.45998
+    }
+  },
+  {
     "id": "2974591",
     "name": "Sigean",
     "coordinates": {
@@ -277,14 +285,6 @@
     "coordinates": {
       "lon": 2.81427,
       "lat": 42.62659
-    }
-  },
-  {
-    "id": "2991153",
-    "name": "Muret",
-    "coordinates": {
-      "lon": 1.32541,
-      "lat": 43.45998
     }
   },
   {

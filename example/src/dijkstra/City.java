@@ -1,4 +1,4 @@
-package main;
+package dijkstra;
 
 public class City{
 
