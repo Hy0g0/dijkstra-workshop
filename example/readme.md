@@ -9,7 +9,7 @@ cd src
 ```
 ## 2
 ``` 
-javac main/*.java
+javac dijkstra/*.java
 ```
 ## 3
 ```
