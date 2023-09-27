@@ -69,7 +69,7 @@ public class Cities {
         return totaldist;
     }
 
-    public double OrderButBetter(){
+    public double glutton(){
         ArrayList<City> unvisited = new ArrayList<>(cityList);
         ArrayList<City> order = new ArrayList<City>();
         City city = unvisited.get(0);
@@ -96,34 +96,59 @@ public class Cities {
 }
 
 
-public double dijkstra(){
-    ArrayList<City> unvisited = new ArrayList<>(cityList); // Create a copy of the cityList to track unvisited cities
-    Map<City, Double> distanceMap = new HashMap<>();
-    
-    // Initialize distanceMap with a large initial value (infinity)
-    for (City city : cityList) {
-        distanceMap.put(city, Double.MAX_VALUE);
-    }
-    
-    // Set the distance of the starting city to 0
-    distanceMap.put(cityList.get(0), 0.0);
-    
-    while (!unvisited.isEmpty()) {
-        City city = Collections.min(distanceMap.values());
+public double localSearch() {
+    ArrayList<City> currentOrder = new ArrayList<>(cityList);
+    double currentDistance = getDistanceInOrder();
 
-        
-        // Uncomment the following loop to update distances to neighbors
-        for (City city2 : unvisited) {
-                double alt = distanceMap.get(u) + u.getDistance(city2);
-                if (alt < distanceMap.get(city2)) {
-                    distanceMap.put(city2, alt);
+    boolean improved;
+    do {
+        improved = false;
+        for (int i = 1; i < currentOrder.size() - 1; i++) {
+            for (int j = i + 1; j < currentOrder.size(); j++) {
+                ArrayList<City> newOrder = newOrder(currentOrder, i, j);
+                double newDistance = calculateTotalDistance(newOrder);
+
+                if (newDistance < currentDistance) {
+                    currentOrder = newOrder;
+                    currentDistance = newDistance;
+                    improved = true;
                 }
+            }
         }
-        
-        unvisited.remove(city);
+    } while (improved);
+
+    System.out.println(cityList.toString());
+    return currentDistance;
+}
+
+private ArrayList<City> newOrder(ArrayList<City> order, int i, int j) {
+    ArrayList<City> newOrder = new ArrayList<>(order.subList(0, i));
+    for (int x = j; x >= i; x--) {
+        newOrder.add(order.get(x));
     }
-    
-    return 0.0;
+    newOrder.addAll(order.subList(j + 1, order.size()));
+    return newOrder;
+}
+
+private double calculateTotalDistance(ArrayList<City> order) {
+    double totalDistance = 0;
+    City prevCity = order.get(0);
+    for (City city : order) {
+        totalDistance += prevCity.getDistance(city);
+        prevCity = city;
+    }
+    return totalDistance;
+}
+
+
+
+@Override
+public String toString() {
+    String result = "";
+    for (City city : this.cityList) {
+        result += city.toString();
+    }
+    return result;
 }
 
 }

@@ -1,7 +1,5 @@
 package dijkstra;
 
-import dijkstra.Cities;
-
 public class Main {
     public static void main(String[] args) {
         Cities cities = new Cities();
@@ -16,8 +14,8 @@ public class Main {
         // City cit2 = cities.getCity(2);
         //System.out.printf("%.2f",cit.getDistance(cit2));
         System.out.println(cities.getDistanceInOrder());
-        System.out.println(cities.OrderButBetter());
-        System.out.println(cities.dijkstra());
+        System.out.println(cities.glutton());
+        System.out.println(cities.localSearch());
         // Float dist = cities.get(1)
     }
 }
